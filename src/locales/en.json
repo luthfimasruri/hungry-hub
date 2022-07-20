@@ -1,0 +1,15 @@
+{
+  "language": "Language",
+  "hello": "Hello world",
+  "test": "test",
+  "signin": "Sign in",
+  "signin_register": "Sign in / Register",
+  "menu": {
+    "for_business": "For Business",
+    "gift_cards": "Gift Cards",
+    "blog": "Blog",
+    "download_app": "Download App",
+    "help": "Help"
+  },
+  "search_placeholder": "Search Restaurant, Cuisine, Location"
+}
