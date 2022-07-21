@@ -4,14 +4,14 @@ const useLocales = () => {
   const localeItems = computed(() => {
     return [
       {
-        text: 'EN',
-        value: 'en',
-        icon: '/images/flag-en.png',
-      },
-      {
         text: 'TH',
         value: 'th',
         icon: '/images/flag-th.png',
+      },
+      {
+        text: 'EN',
+        value: 'en',
+        icon: '/images/flag-en.png',
       },
     ]
   })

@@ -1,6 +1,6 @@
 <script setup>
 import VCardRestaurant from '../components/VCardRestaurant.vue'
-// import { useI18n } from 'vue-i18n'
+import { useI18n } from 'vue-i18n'
 import { useSection3Store } from '../stores/sections'
 import { useURL } from '../composables/url'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -18,7 +18,7 @@ import { computed } from 'vue'
 const section3 = useSection3Store()
 await section3.fetchSection3()
 
-// const { t } = useI18n()
+const { t } = useI18n()
 const { pathToURL } = useURL()
 const onSwiper = (swiper) => {
   console.log(swiper)
@@ -40,7 +40,7 @@ const slidesPerView = computed(() => {
       <h2
         class="text-center text-2xl font-extrabold tracking-tight text-gray-900"
       >
-        Weekly Recomended
+        {{ t('section3_title') }}
       </h2>
       <div class="relative -mx-2">
         <swiper
@@ -73,10 +73,10 @@ const slidesPerView = computed(() => {
             />
           </swiper-slide>
         </swiper>
-        <div class="swiper-button-next -right-8 -mt-10">
+        <div class="swiper-button-next -right-7 -mt-10">
           <ChevronRightIcon class="h-8 w-8" />
         </div>
-        <div class="swiper-button-prev -left-8 -mt-10">
+        <div class="swiper-button-prev -left-7 -mt-10">
           <ChevronLeftIcon class="h-8 w-8" />
         </div>
       </div>

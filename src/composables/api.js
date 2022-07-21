@@ -1,11 +1,12 @@
 import axios from 'axios'
+import { useLocales } from './locales'
 
 const useApi = () => {
+  const { currentLocale } = useLocales()
   const api = axios.create({
     baseURL: import.meta.env.VITE_API_BASE_URL,
   })
-  const i18nLocaleStorage = localStorage.getItem('i18n_locale')
-  api.defaults.headers.common['x-hh-language'] = i18nLocaleStorage || 'en'
+  api.defaults.headers.common['x-hh-language'] = currentLocale
   api.interceptors.response.use(({ data }) => {
     return data
   })
