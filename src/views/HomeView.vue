@@ -3,6 +3,8 @@ import Banner from '../sections/Banner.vue'
 import Section3 from '../sections/Section3.vue'
 import Section3Mobile from '../sections/Section3Mobile.vue'
 import { useBreakpoint } from '../composables/breakpoint'
+import LoadingBanner from '../components/loading/LoadingBanner.vue'
+import LoadingCards from '../components/loading/LoadingCards.vue'
 const { mdAndUp } = useBreakpoint()
 </script>
 
@@ -11,14 +13,15 @@ const { mdAndUp } = useBreakpoint()
     <Suspense>
       <Banner />
       <template #fallback>
-        <div class="text-center">loading...</div>
+        <LoadingBanner />
       </template>
     </Suspense>
+
     <template v-if="mdAndUp()">
       <Suspense>
         <Section3 />
         <template #fallback>
-          <div class="text-center">loading...</div>
+          <LoadingCards />
         </template>
       </Suspense>
     </template>
@@ -26,7 +29,7 @@ const { mdAndUp } = useBreakpoint()
       <Suspense>
         <Section3Mobile />
         <template #fallback>
-          <div class="text-center">loading...</div>
+          <LoadingCards />
         </template>
       </Suspense>
     </template>
