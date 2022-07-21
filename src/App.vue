@@ -14,14 +14,14 @@ if (cities.data.length === 0) {
 </script>
 
 <template>
-  <header>
-    <template v-if="mdAndUp()">
-      <Navbar />
-    </template>
-    <template v-else>
-      <NavbarMobile />
-    </template>
-  </header>
+  <!-- <header> -->
+  <template v-if="mdAndUp()">
+    <Navbar />
+  </template>
+  <template v-else>
+    <NavbarMobile />
+  </template>
+  <!-- </header> -->
 
   <RouterView />
   <Footer />

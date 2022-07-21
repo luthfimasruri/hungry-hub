@@ -31,7 +31,7 @@ const { appItems, menuItems } = useNavbar()
             :title="t('menu.download_app')"
             :items="appItems"
             v-slot="{ items }"
-            class="z-10"
+            class="z-20"
           >
             <template v-for="item in items" :key="item.text">
               <a
@@ -51,7 +51,7 @@ const { appItems, menuItems } = useNavbar()
   </div>
 
   <!-- Middle Navigation -->
-  <Disclosure as="nav" class="bg-white shadow">
+  <Disclosure as="nav" class="sticky top-0 z-10 bg-white shadow">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-11 justify-between">
         <div class="flex items-center">

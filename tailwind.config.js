@@ -19,6 +19,10 @@ module.exports = {
           900: '#1F0505',
         },
       },
+      fontSize: {
+        '3xs': '.55rem',
+        '2xs': '.65rem',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
