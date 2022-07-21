@@ -3,7 +3,7 @@ import Navbar from './layouts/Navbar.vue'
 import NavbarMobile from './layouts/NavbarMobile.vue'
 import { RouterView } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import useBreakpoint from './composables/breakpoint'
+import { useBreakpoint } from './composables/breakpoint'
 import { useCitiesStore } from './stores/cities'
 
 const { mdAndUp } = useBreakpoint()

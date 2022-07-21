@@ -28,4 +28,5 @@ const useLocales = () => {
   }
 }
 
+export { useLocales }
 export default useLocales

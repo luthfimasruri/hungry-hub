@@ -1,7 +1,7 @@
 <script setup>
 import { watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import useLocales from '../composables/locales'
+import { useLocales } from '../composables/locales'
 import VSelect from '../components/VSelect.vue'
 
 const { locale } = useI18n({ useScope: 'global' })

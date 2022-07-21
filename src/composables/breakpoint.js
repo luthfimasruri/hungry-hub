@@ -86,4 +86,5 @@ const useBreakpoint = () => {
   }
 }
 
+export { useBreakpoint }
 export default useBreakpoint

@@ -15,7 +15,6 @@ function getBannerUrl(path) {
 </script>
 
 <template>
-  <!-- <pre>{{ banners.homeBanner }}</pre> -->
   <div class="relative">
     <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
     <div class="relative shadow-xl sm:overflow-hidden">

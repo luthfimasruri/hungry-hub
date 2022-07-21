@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 import { Disclosure } from '@headlessui/vue'
-import useNavbar from '../composables/navbar'
+import { useNavbar } from '../composables/navbar'
 import VDropdown from '../components/VDropdown.vue'
 import NavbarCities from './NavbarCities.vue'
 import NavbarSearch from './NavbarSearch.vue'

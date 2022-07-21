@@ -46,4 +46,5 @@ const useNavbar = () => {
   }
 }
 
+export { useNavbar }
 export default useNavbar
