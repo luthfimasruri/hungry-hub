@@ -34,8 +34,8 @@ const open = ref(false)
         class="flex-none rounded-full focus:outline-none focus:ring-2 focus:ring-black"
       >
         <img
-          alt="Vue logo"
-          class="logo"
+          alt="Search Button"
+          class=""
           src="/images/search-button-red.png"
           width="32"
           height="32"
@@ -49,8 +49,8 @@ const open = ref(false)
     class="flex-none rounded-full focus:outline-none focus:ring-2 focus:ring-black"
   >
     <img
-      alt="Vue logo"
-      class="logo"
+      alt="Search Button"
+      class=""
       src="/images/search-button-red.png"
       width="32"
       height="32"

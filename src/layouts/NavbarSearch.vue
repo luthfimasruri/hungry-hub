@@ -35,8 +35,8 @@ const expanded = ref(false)
       class="relative rounded-full focus:outline-none focus:ring-2 focus:ring-black"
     >
       <img
-        alt="Vue logo"
-        class="logo"
+        alt="Search Button"
+        class=""
         src="/images/search-button-red.png"
         width="32"
         height="32"

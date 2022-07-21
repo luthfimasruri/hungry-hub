@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { useBannersStore } from '../stores/banners'
 import { useConfigStore } from '../stores/config'
+import { useURL } from '../composables/url'
 const banners = useBannersStore()
 await banners.fetchBanners()
 
@@ -9,9 +10,7 @@ const config = useConfigStore()
 await config.fetchConfig()
 
 const { t } = useI18n()
-function getBannerUrl(path) {
-  return `${import.meta.env.VITE_API_BASE_URL}${path}`
-}
+const { pathToURL } = useURL()
 </script>
 
 <template>
@@ -21,7 +20,7 @@ function getBannerUrl(path) {
       <div class="absolute inset-0">
         <img
           class="h-full w-full object-cover"
-          :src="getBannerUrl(banners.homeBanner.desktop_versions[0].url)"
+          :src="pathToURL(banners.homeBanner.desktop_versions[0].url)"
           alt="People working on laptops"
         />
         <div class="absolute inset-0 bg-gray-500 mix-blend-multiply" />
@@ -45,12 +44,12 @@ function getBannerUrl(path) {
           >
             <label for="email" class="sr-only">Email</label>
             <img
-              class="hidden h-9 w-9 p-2 sm:inline"
-              src="/images/icon-search-red.png"
+              class="hidden h-11 w-11 p-3 sm:inline"
+              src="/icons/icon-search-red.png"
               alt="Search"
             />
             <input
-              type="email"
+              type="text"
               name="email"
               id="email"
               class="block w-full rounded-full border-transparent py-2 text-base placeholder-gray-500 shadow-sm focus:border-black focus:ring-black sm:flex-1"
@@ -62,7 +61,7 @@ function getBannerUrl(path) {
             >
               <span class="hidden sm:inline">{{ t('find_restaurant') }}</span>
               <img
-                alt="Vue logo"
+                alt="Search Button"
                 class="sm:hidden"
                 src="/images/search-button-red.png"
                 width="32"

@@ -57,8 +57,8 @@ const { appItems, menuItems } = useNavbar()
         <div class="flex items-center">
           <RouterLink class="flex-shrink-0" to="/"
             ><img
-              alt="Vue logo"
-              class="logo"
+              alt="Hungry Hub Logo"
+              class=""
               src="/images/logo-new-full.png"
               width="130"
           /></RouterLink>
