@@ -24,24 +24,22 @@ const { pathToURL } = useURL()
       >
         {{ t('section3_title') }}
       </h2>
-      <div class="-mx-3">
-        <div class="flex space-x-3 overflow-x-scroll px-3">
-          <div
-            v-for="item in section3.data"
-            :key="item.id"
-            class="w-64 flex-none flex-shrink-0 py-6"
-          >
-            <VCardRestaurant
-              :name="item.attributes.name"
-              :price="item.attributes.price_v2.format"
-              :cuisine="item.attributes.cuisine"
-              :location="item.attributes.location || ''"
-              :totalLocation="item.attributes.total_locations || 0"
-              :image="pathToURL(item.attributes.cover.thumb)"
-              :review-score="item.attributes.avg_reviews"
-              :review-count="item.attributes.total_reviews"
-            />
-          </div>
+      <div class="-mx-4 flex space-x-3 overflow-x-scroll px-4">
+        <div
+          v-for="item in section3.data"
+          :key="item.id"
+          class="w-64 flex-none flex-shrink-0 py-6"
+        >
+          <VCardRestaurant
+            :name="item.attributes.name"
+            :price="item.attributes.price_v2.format"
+            :cuisine="item.attributes.cuisine"
+            :location="item.attributes.location || ''"
+            :totalLocation="item.attributes.total_locations || 0"
+            :image="pathToURL(item.attributes.cover.thumb)"
+            :review-score="item.attributes.avg_reviews"
+            :review-count="item.attributes.total_reviews"
+          />
         </div>
       </div>
     </div>

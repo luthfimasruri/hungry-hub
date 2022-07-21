@@ -137,7 +137,7 @@ const props = defineProps({
           <div
             class="flex h-5 items-center justify-center rounded bg-red pl-1.5 pr-1 text-sm font-bold text-white"
           >
-            {{ props.reviewScore }}
+            {{ props.reviewScore.toFixed(1) }}
             <StarIcon class="ml-1 h-5" />
           </div>
           <div class="mt-0.5 truncate text-3xs">
