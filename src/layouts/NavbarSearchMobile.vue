@@ -3,8 +3,8 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { XIcon } from '@heroicons/vue/outline'
 import NavbarCities from './NavbarCities.vue'
-const { t } = useI18n({ useScope: 'global' })
 
+const { t } = useI18n({ useScope: 'global' })
 const open = ref(false)
 </script>
 

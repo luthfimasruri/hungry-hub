@@ -1,22 +1,29 @@
 <script setup>
-import VCardRestaurant from '../components/VCardRestaurant.vue'
+import { computed, watch } from 'vue'
+import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
-import { useSection3Store } from '../stores/sections'
-import { useURL } from '../composables/url'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-// import Swiper core and required modules
 import { Navigation, Pagination, A11y } from 'swiper'
-import { useBreakpoint } from '../composables/breakpoint'
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/vue/outline'
+import { useSection3Store } from '../stores/sections'
+import { useCitiesStore } from '../stores/cities'
+import { useURL } from '../composables/url'
+import { useBreakpoint } from '../composables/breakpoint'
+import VCardRestaurant from '../components/VCardRestaurant.vue'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
-import { computed } from 'vue'
 
-const section3 = useSection3Store()
-await section3.fetchSection3()
+const section3Store = useSection3Store()
+await section3Store.fetchSection3()
+
+const citiesStore = useCitiesStore()
+const { currentCityId } = storeToRefs(citiesStore)
+watch(currentCityId, async () => {
+  await section3Store.fetchSection3()
+})
 
 const { t } = useI18n()
 const { pathToURL } = useURL()
@@ -28,9 +35,9 @@ const onSlideChange = () => {
 }
 const modules = [Navigation, Pagination, A11y]
 
-const { lgAndUp, mdAndUp, smAndUp } = useBreakpoint()
+const { xlAndUp, lgAndUp, mdAndUp, smAndUp } = useBreakpoint()
 const slidesPerView = computed(() => {
-  return lgAndUp() ? 5 : mdAndUp() ? 3 : smAndUp() ? 2 : 1
+  return xlAndUp() ? 5 : lgAndUp ? 4 : mdAndUp() ? 3 : smAndUp() ? 2 : 1
 })
 </script>
 
@@ -47,7 +54,10 @@ const slidesPerView = computed(() => {
           :modules="modules"
           :slides-per-view="slidesPerView"
           :space-between="16"
-          :pagination="{ clickable: true }"
+          :pagination="{
+            clickable: true,
+            dynamicBullets: true,
+          }"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
           class="py-6 px-2"
@@ -57,7 +67,7 @@ const slidesPerView = computed(() => {
           }"
         >
           <swiper-slide
-            v-for="item in section3.data"
+            v-for="item in section3Store.data"
             :key="item.id"
             class="pb-6"
           >

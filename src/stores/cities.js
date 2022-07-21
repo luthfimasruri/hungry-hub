@@ -1,27 +1,29 @@
 import { defineStore } from 'pinia'
 import { useApi } from '../composables/api'
+
 const { api } = useApi()
 
 export const useCitiesStore = defineStore({
   id: 'cities',
   state: () => ({
     data: [],
-    selected: null,
+    currentCityId: '1',
+    currentCity: null,
     loading: false,
   }),
-  getters: {},
   actions: {
     setCities(cities) {
       this.data = cities
     },
     setCityById(id) {
-      this.selected = this.data.find((item) => item.id === id)
+      this.currentCityId = id
+      this.currentCity = this.data.find((city) => city.id === id)
     },
     async initCities() {
       this.loading = true
       const { data: cities } = await api.get('/api/v5/cities.json')
       this.setCities(cities)
-      this.setCityById(cities[0].id)
+      this.setCityById(this.currentCityId)
       this.loading = false
     },
   },

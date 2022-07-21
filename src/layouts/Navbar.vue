@@ -7,6 +7,7 @@ import VDropdown from '../components/VDropdown.vue'
 import NavbarCities from './NavbarCities.vue'
 import NavbarSearch from './NavbarSearch.vue'
 import NavbarLanguage from './NavbarLanguage.vue'
+
 const { t } = useI18n({ useScope: 'global' })
 const { appItems, menuItems } = useNavbar()
 </script>

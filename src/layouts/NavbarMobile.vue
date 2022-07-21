@@ -62,9 +62,14 @@ const { appItems, menuItems } = useNavbar()
         </div>
       </div>
 
+      <!-- Overlay -->
+      <div
+        v-show="open"
+        class="fixed inset-0 top-11 z-10 bg-black bg-opacity-50 transition-all duration-200 ease-in-out"
+      ></div>
       <!-- Dropdown Menu -->
       <DisclosurePanel class="absolute z-20 md:hidden">
-        <div class="space-y-1">
+        <div class="z-20 space-y-1">
           <div class="bg-gray-200" style="width: 200px">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <ul class="">

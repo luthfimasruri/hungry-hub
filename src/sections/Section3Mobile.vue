@@ -1,16 +1,25 @@
 <script setup>
-import VCardRestaurant from '../components/VCardRestaurant.vue'
+import { watch } from 'vue'
+import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useSection3Store } from '../stores/sections'
+import { useCitiesStore } from '../stores/cities'
 import { useURL } from '../composables/url'
+import VCardRestaurant from '../components/VCardRestaurant.vue'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
-const section3 = useSection3Store()
-await section3.fetchSection3()
+const section3Store = useSection3Store()
+await section3Store.fetchSection3()
+
+const citiesStore = useCitiesStore()
+const { currentCityId } = storeToRefs(citiesStore)
+watch(currentCityId, async () => {
+  await section3Store.fetchSection3()
+})
 
 const { t } = useI18n()
 const { pathToURL } = useURL()
@@ -26,7 +35,7 @@ const { pathToURL } = useURL()
       </h2>
       <div class="-mx-4 flex space-x-3 overflow-x-scroll px-4">
         <div
-          v-for="item in section3.data"
+          v-for="item in section3Store.data"
           :key="item.id"
           class="w-64 flex-none flex-shrink-0 py-6"
         >

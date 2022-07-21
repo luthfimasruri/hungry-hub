@@ -2,8 +2,8 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import NavbarCities from './NavbarCities.vue'
-const { t } = useI18n({ useScope: 'global' })
 
+const { t } = useI18n({ useScope: 'global' })
 const expanded = ref(false)
 </script>
 

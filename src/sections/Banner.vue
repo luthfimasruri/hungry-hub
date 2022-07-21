@@ -1,13 +1,23 @@
 <script setup>
+import { watch } from 'vue'
+import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useBannersStore } from '../stores/banners'
 import { useConfigStore } from '../stores/config'
+import { useCitiesStore } from '../stores/cities'
 import { useURL } from '../composables/url'
-const banners = useBannersStore()
-await banners.fetchBanners()
 
-const config = useConfigStore()
-await config.fetchConfig()
+const configStore = useConfigStore()
+await configStore.fetchConfig()
+
+const bannersStore = useBannersStore()
+await bannersStore.fetchBanners()
+
+const citiesStore = useCitiesStore()
+const { currentCityId } = storeToRefs(citiesStore)
+watch(currentCityId, async () => {
+  await bannersStore.fetchBanners()
+})
 
 const { t } = useI18n()
 const { pathToURL } = useURL()
@@ -20,7 +30,7 @@ const { pathToURL } = useURL()
       <div class="absolute inset-0">
         <img
           class="h-full w-full object-cover"
-          :src="pathToURL(banners.homeBanner.desktop_versions[0].url)"
+          :src="pathToURL(bannersStore.homeBanner)"
           alt="People working on laptops"
         />
         <div class="absolute inset-0 bg-gray-500 mix-blend-multiply" />
@@ -29,12 +39,12 @@ const { pathToURL } = useURL()
         <h1
           class="text-center text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
         >
-          <span class="block text-white">{{ config.appTitle }}</span>
+          <span class="block text-white">{{ configStore.appTitle }}</span>
         </h1>
         <p
           class="mx-auto mt-6 max-w-lg text-center text-xl text-gray-300 sm:max-w-3xl"
         >
-          {{ config.appDescription }}
+          {{ configStore.appDescription }}
         </p>
         <div class="">
           <form

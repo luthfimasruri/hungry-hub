@@ -1,6 +1,6 @@
 <script setup>
 import { useCitiesStore } from '../stores/cities'
-const cities = useCitiesStore()
+const citiesStore = useCitiesStore()
 const props = defineProps({
   innerClass: {
     type: String,
@@ -10,16 +10,16 @@ const props = defineProps({
 </script>
 
 <template>
-  <div v-if="!cities.loading" class="ml-2 md:ml-3">
+  <div v-if="!citiesStore.loading" class="ml-2 md:ml-3">
     <select
       id="city"
       name="city"
       class="block h-8 w-full rounded-full border-red-300 py-1 pl-3 pr-8 text-sm focus:border-black focus:outline-none focus:ring-black"
       :class="props.innerClass"
-      @change="cities.setCityById($event.target.value)"
-      :value="cities.selected.id"
+      @change="citiesStore.setCityById($event.target.value)"
+      :value="citiesStore.currentCityId"
     >
-      <option v-for="city in cities.data" :key="city.id" :value="city.id">
+      <option v-for="city in citiesStore.data" :key="city.id" :value="city.id">
         {{ city.attributes.name }}
       </option>
     </select>
