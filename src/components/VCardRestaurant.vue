@@ -25,6 +25,7 @@ const props = defineProps({
   image: {
     type: String,
     required: true,
+    default: '/images/no-image-found.png',
   },
   reviewScore: {
     type: Number,
@@ -34,11 +35,23 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  acceptDineIn: {
+    type: Boolean,
+    default: true,
+  },
+  acceptXperience: {
+    type: Boolean,
+    default: true,
+  },
+  acceptDelivery: {
+    type: Boolean,
+    default: true,
+  },
 })
 </script>
 
 <template>
-  <div class="group relative rounded-md shadow-lg">
+  <div class="group relative rounded-md shadow-lg hover:shadow-xl">
     <div
       class="min-h-80 aspect-video w-full overflow-hidden rounded-t-md bg-gray-200 group-hover:opacity-90"
     >
@@ -85,11 +98,16 @@ const props = defineProps({
                 class="mr-0.5 h-3"
                 src="/icons/icon-pin-location-black.png"
               />
-              <span class="truncate">{{ props.totalLocation }} Branches</span>
+              <span class="truncate">
+                <template v-if="props.location">
+                  <span>{{ props.location }}</span>
+                </template>
+                <template v-else> {{ props.totalLocation }} Branches </template>
+              </span>
             </div>
           </div>
           <div class="flex items-center space-x-1">
-            <div class="flex items-center">
+            <div v-if="props.acceptDineIn" class="flex items-center">
               <img
                 alt="Pin Location"
                 class="mr-0.5 h-3"
@@ -97,7 +115,7 @@ const props = defineProps({
               />
               <span class="whitespace-nowrap">Dine In</span>
             </div>
-            <div class="flex items-center">
+            <div v-if="props.acceptXperience" class="flex items-center">
               <img
                 alt="Pin Location"
                 class="mr-0.5 h-3"
@@ -105,7 +123,7 @@ const props = defineProps({
               />
               <span class="whitespace-nowrap">XP</span>
             </div>
-            <div class="flex items-center">
+            <div v-if="props.acceptDelivery" class="flex items-center">
               <img
                 alt="Pin Location"
                 class="mr-0.5 h-3"
