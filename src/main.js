@@ -20,6 +20,10 @@ const i18n = createI18n({
 
 import App from './App.vue'
 import router from './router'
+
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import './assets/css/main.css'
 
 const app = createApp(App)

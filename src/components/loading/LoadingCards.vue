@@ -11,6 +11,7 @@ const slidesPerView = computed(() => {
 <template>
   <div class="bg-white">
     <div class="mx-auto py-6 px-4 sm:py-12 sm:px-8 lg:max-w-7xl lg:px-8">
+      <div class="mx-auto h-5 w-full max-w-xs rounded-full bg-gray-300"></div>
       <div
         class="-mx-4 flex space-x-4 overflow-x-scroll py-6 px-4 md:overflow-x-visible"
       >

@@ -11,11 +11,6 @@ import { useURL } from '../composables/url'
 import { useBreakpoint } from '../composables/breakpoint'
 import VCardRestaurant from '../components/VCardRestaurant.vue'
 
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
-
 const section3Store = useSection3Store()
 await section3Store.fetchSection3()
 

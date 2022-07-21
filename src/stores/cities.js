@@ -7,8 +7,8 @@ export const useCitiesStore = defineStore({
   id: 'cities',
   state: () => ({
     data: [],
-    currentCityId: '1',
     currentCity: null,
+    currentCityId: localStorage.getItem('city_id') || '1',
     loading: false,
   }),
   actions: {
@@ -17,6 +17,7 @@ export const useCitiesStore = defineStore({
     },
     setCityById(id) {
       this.currentCityId = id
+      localStorage.setItem('city_id', id)
       this.currentCity = this.data.find((city) => city.id === id)
     },
     async initCities() {
