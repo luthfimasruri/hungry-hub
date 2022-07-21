@@ -35,6 +35,10 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  customText: {
+    type: String,
+    default: '',
+  },
   acceptDineIn: {
     type: Boolean,
     default: true,
@@ -60,6 +64,12 @@ const props = defineProps({
         :alt="props.name"
         class="h-full w-full object-cover object-center lg:h-full lg:w-full"
       />
+      <div
+        v-if="props.customText"
+        class="absolute top-3 rounded-r-full bg-red px-2 py-1 text-2xs text-white"
+      >
+        {{ props.customText }}
+      </div>
     </div>
     <div class="px-2.5 py-2">
       <div class="flex justify-between text-sm">

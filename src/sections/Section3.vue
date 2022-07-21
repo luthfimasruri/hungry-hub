@@ -70,6 +70,7 @@ const slidesPerView = computed(() => {
               :image="pathToURL(item.attributes.cover.thumb)"
               :review-score="item.attributes.avg_reviews"
               :review-count="item.attributes.total_reviews"
+              :custom-text="item.attributes.custom_text"
               :accept-delivery="item.attributes.package_types.includes('hah')"
               :accept-xperience="item.attributes.package_types.includes('xp')"
               :accept-dine-in="
