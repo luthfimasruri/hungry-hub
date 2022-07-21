@@ -11,5 +11,6 @@
     "download_app": "ดาวน์โหลดแอปฯ",
     "help": "ช่วยเหลือ"
   },
-  "search_placeholder": "ชื่อร้านอาหาร, ประเภท, สถานที่"
+  "search_placeholder": "ชื่อร้านอาหาร, ประเภท, สถานที่",
+  "find_restaurant": "ค้นหาร้านอาหาร"
 }

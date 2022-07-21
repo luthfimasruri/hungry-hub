@@ -3,20 +3,6 @@ import { useI18n } from 'vue-i18n'
 
 const useNavbar = () => {
   const { t } = useI18n({ useScope: 'global' })
-  const localeItems = computed(() => {
-    return [
-      {
-        text: 'EN',
-        value: 'en',
-        icon: '/images/flag-en.png',
-      },
-      {
-        text: 'TH',
-        value: 'th',
-        icon: '/images/flag-th.png',
-      },
-    ]
-  })
 
   const appItems = computed(() => {
     return [
@@ -57,7 +43,6 @@ const useNavbar = () => {
   return {
     appItems,
     menuItems,
-    localeItems,
   }
 }
 

@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
+import useLocales from './composables/locales'
+const { currentLocale } = useLocales()
 
 /*
  * The i18n resources in the path specified in the plugin `include` option can be read
@@ -9,7 +11,7 @@ import { createI18n } from 'vue-i18n'
 import en from './locales/en.json'
 import th from './locales/th.json'
 const i18n = createI18n({
-  locale: 'en',
+  locale: currentLocale,
   messages: {
     en,
     th,
