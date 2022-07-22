@@ -1,4 +1,24 @@
-# hungry-hub
+# Hungry Hub Test
+
+🚀 [LINK DEMO WEBSITE](https://hh.mify.co/) 🚀
+
+## Features
+
+- ⚡️ Vue 3, Vite 3, ESBuild - born with fastness
+- 🎨 Tailwind CSS framework
+- 💻 Responsive Web Design (RWD)
+- 🍍 State Management via Pinia
+- 🌍 I18n ready
+- 🔥 Use the new `<script setup>` syntax
+
+## Miscellaneous
+
+- Linter (code quality): ESLint
+- Auto Code Formatter: Prettier
+
+## Lighthouse Score
+
+# Setup
 
 This template should help get you started developing with Vue 3 in Vite.
 
