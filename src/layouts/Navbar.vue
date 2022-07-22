@@ -20,7 +20,7 @@ const { appItems, menuItems } = useNavbar()
         <template v-for="item in menuItems" :key="item.text">
           <li class="">
             <a
-              href="{{ item.href }}"
+              :href="item.href"
               class="flex h-8 items-center px-2 text-sm text-gray-700 hover:text-gray-900 lg:px-4"
             >
               {{ item.text }}
@@ -36,7 +36,7 @@ const { appItems, menuItems } = useNavbar()
           >
             <template v-for="item in items" :key="item.text">
               <a
-                href="{{ item.href }}"
+                :href="item.href"
                 class="flex items-center px-2 text-sm text-gray-700 hover:text-gray-900 lg:px-4"
               >
                 <img :src="item.icon" :alt="item.text" class="my-1" />
