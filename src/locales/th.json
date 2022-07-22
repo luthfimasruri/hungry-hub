@@ -13,5 +13,8 @@
   },
   "search_placeholder": "ชื่อร้านอาหาร, ประเภท, สถานที่",
   "find_restaurant": "ค้นหาร้านอาหาร",
-  "section3_title": "ร้านเด็ด น่าโดน"
+  "section3_title": "ร้านเด็ด น่าโดน",
+  "net_person": "ราคาสุทธิ/ท่าน",
+  "branch": "สาขา",
+  "review": "รีวิว"
 }

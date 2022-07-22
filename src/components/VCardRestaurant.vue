@@ -1,6 +1,8 @@
 <script setup>
 import { StarIcon } from '@heroicons/vue/solid'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
   name: {
     type: String,
@@ -55,7 +57,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="group relative rounded-md shadow-lg hover:shadow-xl">
+  <div class="group relative rounded-md shadow-lg">
     <div
       class="min-h-80 aspect-video w-full overflow-hidden rounded-t-md bg-gray-200 group-hover:opacity-90"
     >
@@ -88,7 +90,7 @@ const props = defineProps({
             />
             {{ props.price }}
           </p>
-          <div class="text-2xs">NET/Person</div>
+          <div class="text-2xs">{{ t('net_person') }}</div>
         </div>
       </div>
       <div class="mt-2 flex text-2xs">
@@ -112,7 +114,10 @@ const props = defineProps({
                 <template v-if="props.location">
                   <span>{{ props.location }}</span>
                 </template>
-                <template v-else> {{ props.totalLocation }} Branches </template>
+                <template v-else>
+                  {{ props.totalLocation }}
+                  {{ t('branch', props.totalLocation) }}
+                </template>
               </span>
             </div>
           </div>
@@ -143,7 +148,7 @@ const props = defineProps({
             </div>
           </div>
         </div>
-        <div class="flex w-14 shrink-0 flex-col justify-end">
+        <div class="flex w-14 shrink-0 flex-col items-end justify-end">
           <div
             class="flex h-5 items-center justify-center rounded bg-red pl-1.5 pr-1 text-sm font-bold text-white"
           >
@@ -151,7 +156,7 @@ const props = defineProps({
             <StarIcon class="ml-1 h-5" />
           </div>
           <div class="mt-0.5 truncate text-3xs">
-            {{ props.reviewCount }} Reviews
+            {{ props.reviewCount }} {{ t('review', props.reviewCount) }}
           </div>
         </div>
       </div>

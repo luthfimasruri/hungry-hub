@@ -30,9 +30,9 @@ const onSlideChange = () => {
 }
 const modules = [Navigation, Pagination, A11y]
 
-const { xlAndUp, lgAndUp, mdAndUp, smAndUp } = useBreakpoint()
+const { xlOnly, lgAndUp, mdAndUp, smAndUp } = useBreakpoint()
 const slidesPerView = computed(() => {
-  return xlAndUp() ? 5 : lgAndUp ? 4 : mdAndUp() ? 3 : smAndUp() ? 2 : 1
+  return xlOnly() ? 5 : lgAndUp() ? 4 : mdAndUp() ? 3 : smAndUp() ? 2 : 1
 })
 </script>
 
@@ -52,6 +52,7 @@ const slidesPerView = computed(() => {
           :pagination="{
             clickable: true,
             dynamicBullets: true,
+            el: '.swiper-custom-pagination',
           }"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
@@ -64,7 +65,7 @@ const slidesPerView = computed(() => {
           <swiper-slide
             v-for="item in section3Store.data"
             :key="item.id"
-            class="pb-6"
+            class=""
           >
             <VCardRestaurant
               :name="item.attributes.name"
@@ -86,12 +87,15 @@ const slidesPerView = computed(() => {
             />
           </swiper-slide>
         </swiper>
-        <div class="swiper-button-next -right-7 -mt-10">
+        <div class="swiper-button-next -right-7">
           <ChevronRightIcon class="h-8 w-8" />
         </div>
-        <div class="swiper-button-prev -left-7 -mt-10">
+        <div class="swiper-button-prev -left-7">
           <ChevronLeftIcon class="h-8 w-8" />
         </div>
+      </div>
+      <div class="relative h-6">
+        <div class="swiper-custom-pagination absolute top-0"></div>
       </div>
     </div>
   </div>
