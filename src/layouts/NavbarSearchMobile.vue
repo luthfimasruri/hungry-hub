@@ -19,12 +19,12 @@ const open = ref(false)
         <XIcon class="block h-6 w-6" aria-hidden="true" />
       </button>
       <NavbarCities
-        class="w-28 flex-none"
+        class="ml-0 w-28 flex-none"
         inner-class="border-none focus:ring-0"
       />
       <hr class="mr-2 h-8 border-r border-gray-300" />
       <input
-        class="block h-8 grow border-0 border-b border-gray-300 pr-6 text-sm focus:border-gray-400 focus:ring-0"
+        class="block h-8 min-w-0 grow border-0 border-b border-gray-300 pr-6 text-sm focus:border-gray-400 focus:ring-0"
         type="text"
         :placeholder="t('search_placeholder')"
       />
