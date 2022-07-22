@@ -18,6 +18,9 @@
 
 ## Lighthouse Score
 
+<img width="677" alt="Screen Shot 2022-07-22 at 08 59 26" src="https://user-images.githubusercontent.com/6185447/180347032-95dd022d-9fc4-422d-abd3-5dea8c47ec0e.png">
+
+
 # Setup
 
 This template should help get you started developing with Vue 3 in Vite.
