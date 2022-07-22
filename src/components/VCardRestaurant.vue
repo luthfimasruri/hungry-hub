@@ -27,7 +27,6 @@ const props = defineProps({
   image: {
     type: String,
     required: true,
-    default: '/images/no-image-found.png',
   },
   reviewScore: {
     type: Number,
@@ -65,6 +64,7 @@ const props = defineProps({
         :src="props.image"
         :alt="props.name"
         class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+        @error="$event.target.src = '/images/no-image-found.png'"
       />
       <div
         v-if="props.customText"
