@@ -148,14 +148,19 @@ const props = defineProps({
             </div>
           </div>
         </div>
-        <div class="flex w-14 shrink-0 flex-col items-end justify-end">
+        <div class="flex w-14 shrink-0 flex-col items-end">
           <div
             class="flex h-5 items-center justify-center rounded bg-red pl-1.5 pr-1 text-sm font-bold text-white"
           >
-            {{ props.reviewScore.toFixed(1) }}
-            <StarIcon class="ml-1 h-5" />
+            <template v-if="props.reviewScore">
+              {{ props.reviewScore.toFixed(1) }}
+              <StarIcon class="ml-1 h-5" />
+            </template>
+            <template v-else>
+              {{ t('new') }}
+            </template>
           </div>
-          <div class="mt-0.5 truncate text-3xs">
+          <div v-if="props.reviewScore" class="mt-0.5 truncate text-3xs">
             {{ props.reviewCount }} {{ t('review', props.reviewCount) }}
           </div>
         </div>
