@@ -9,8 +9,18 @@ import { ChevronDownIcon } from '@heroicons/vue/solid'
 import { computed } from 'vue'
 
 const props = defineProps({
-  modelValue: String,
-  items: Array,
+  modelValue: {
+    type: String,
+    required: true,
+  },
+  items: {
+    type: Array,
+    required: true,
+  },
+  hideSelected: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const emit = defineEmits(['update:modelValue'])
@@ -29,6 +39,7 @@ const selected = computed({
   <Listbox as="div" v-model="selected">
     <div class="relative">
       <ListboxButton
+        data-cy="select-button"
         class="relative flex w-full cursor-default items-center pl-3 pr-8 text-left text-sm focus:outline-none"
       >
         <span class="flex items-center">
@@ -55,6 +66,7 @@ const selected = computed({
         leave-to-class="transform opacity-0 scale-95"
       >
         <ListboxOptions
+          data-cy="select-options"
           class="absolute z-20 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
         >
           <ListboxOption
@@ -65,6 +77,7 @@ const selected = computed({
             v-slot="{ active, selected }"
           >
             <li
+              v-show="!(hideSelected && selected)"
               :class="[
                 active ? 'bg-gray-200' : 'text-gray-900',
                 'relative cursor-default select-none py-1 pl-3',

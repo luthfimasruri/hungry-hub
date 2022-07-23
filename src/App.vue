@@ -22,6 +22,7 @@ if (cities.data.length === 0) {
   </template>
 
   <RouterView />
+
   <Footer />
 </template>
 
