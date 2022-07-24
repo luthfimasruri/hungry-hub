@@ -1,7 +1,6 @@
 <script setup>
 import { watch } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useI18n } from 'vue-i18n'
 import { useSection3Store } from '../stores/sections'
 import { useCitiesStore } from '../stores/cities'
 import { useURL } from '../composables/url'
@@ -21,19 +20,22 @@ watch(currentCityId, async () => {
   await section3Store.fetchSection3()
 })
 
-const { t } = useI18n()
 const { pathToURL } = useURL()
 </script>
 
 <template>
-  <div class="bg-white">
+  <div data-cy="section3-mobile" class="bg-white">
     <div class="mx-auto py-6 px-4 sm:py-12 sm:px-8 lg:max-w-7xl lg:px-8">
       <h2
+        data-cy="section3-mobile-title"
         class="text-center text-2xl font-extrabold tracking-tight text-gray-900"
       >
-        {{ t('section3_title') }}
+        {{ section3Store.title }}
       </h2>
-      <div class="-mx-4 flex space-x-3 overflow-x-scroll px-4">
+      <div
+        data-cy="section3-mobile-slider"
+        class="-mx-4 flex space-x-3 overflow-x-scroll px-4"
+      >
         <div
           v-for="item in section3Store.data"
           :key="item.id"

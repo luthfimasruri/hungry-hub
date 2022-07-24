@@ -1,7 +1,6 @@
 <script setup>
 import { computed, watch } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useI18n } from 'vue-i18n'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Pagination, A11y } from 'swiper'
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/vue/outline'
@@ -20,14 +19,9 @@ watch(currentCityId, async () => {
   await section3Store.fetchSection3()
 })
 
-const { t } = useI18n()
 const { pathToURL } = useURL()
-const onSwiper = (swiper) => {
-  console.log(swiper)
-}
-const onSlideChange = () => {
-  console.log('slide change')
-}
+const onSwiper = () => {}
+const onSlideChange = () => {}
 const modules = [Navigation, Pagination, A11y]
 
 const { xlOnly, lgAndUp, mdAndUp, smAndUp } = useBreakpoint()
@@ -37,14 +31,15 @@ const slidesPerView = computed(() => {
 </script>
 
 <template>
-  <div class="bg-white">
+  <div data-cy="section3" class="bg-white">
     <div class="mx-auto py-6 px-4 sm:py-12 sm:px-8 lg:max-w-7xl lg:px-8">
       <h2
+        data-cy="section3-title"
         class="text-center text-2xl font-extrabold tracking-tight text-gray-900"
       >
-        {{ t('section3_title') }}
+        {{ section3Store.title }}
       </h2>
-      <div class="relative -mx-2">
+      <div data-cy="section3-slider" class="relative -mx-2">
         <swiper
           :modules="modules"
           :slides-per-view="slidesPerView"
@@ -87,15 +82,15 @@ const slidesPerView = computed(() => {
             />
           </swiper-slide>
         </swiper>
-        <div class="swiper-button-next -right-7">
+        <div class="swiper-button-next -right-7 focus:outline-none">
           <ChevronRightIcon class="h-8 w-8" />
         </div>
-        <div class="swiper-button-prev -left-7">
+        <div class="swiper-button-prev -left-7 focus:outline-none">
           <ChevronLeftIcon class="h-8 w-8" />
         </div>
       </div>
-      <div class="relative h-6">
-        <div class="swiper-custom-pagination absolute top-0"></div>
+      <div class="relative h-4">
+        <div class="swiper-custom-pagination absolute inset-0 h-4 p-1"></div>
       </div>
     </div>
   </div>
@@ -107,5 +102,9 @@ const slidesPerView = computed(() => {
 }
 .swiper-button-prev::after {
   display: none;
+}
+.swiper-custom-pagination .swiper-pagination-bullet:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 </style>

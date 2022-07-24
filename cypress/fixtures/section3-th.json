@@ -1,0 +1,522 @@
+{
+  "data": [
+    {
+      "id": "8345",
+      "type": "featured_restaurants",
+      "attributes": {
+        "start_date": "2021-05-15",
+        "total_locations": 2,
+        "total_reviews": 24501,
+        "avg_reviews": 4.8,
+        "branch_id": 82,
+        "cuisine": "นานาชาติ",
+        "location": null,
+        "rank": null,
+        "description": "\u003cdiv\u003eร้าน Copper Buffet บุฟเฟ่ต์นานาชาติ ทั้งหอยนางรม กุ้งเผา แซลมอน สเต็กเนื้อ ซุปเห็ดทรัฟเฟิล ช้อคโกแลตลาวา เครื่องดื่ม ของหวาน ไม่อั้น ที่ The sense ปิ่นเกล้า\u003c/div\u003e\u003cdiv\u003e“Copper” International Buffet “คอปเปอร์” (Copper) หมายถึง “ทองแดง” เป็นโลหะที่มีคุณสมบัติพิเศษ ในด้านทนทานความร้อนสูง แข็งแกร่ง\u003c/div\u003e\u003cdiv\u003eจองร้าน Copper Buffet Booking Special Package ปิ่นเกล้า โปรโมชั่น เซ็ตอาหารนานาชาติ สุดพรีเมี่ยม กับเมนู ซุปเห็ดทรัฟเฟิล ฟัวกราส์ และเมนูอื่นๆ ราคาพิเศษ\u003c/div\u003e\u003cdiv\u003eสั่งเดลิเวอรี่ ร้าน Copper Buffet (คอปเปอร์ บุฟเฟ่ต์) อิ่มอร่อยได้แล้ว ที่บ้าน! กับโปร Copper2Go ส่งถึงบ้าน ราคาพิเศษ เมนูจัดเต็ม ฟินเหมือนกินที่ร้าน\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003eสั่งเดลิเวอรี่ ร้าน GSK X Copper ปิ่นเกล้า โปรโมชั่น เซ็ตอาหารนานาชาติ สุดพรีเมี่ยม กับเมนู ซุปเห็ดทรัฟเฟิล หอยนางรมมิยางิ ฟัวกราส์ และเมนูอื่นๆ ราคาพิเศษ\u003c/div\u003e\u003cdiv\u003eสั่งเดลิเวอรี่ ร้าน LINE X Copper ปิ่นเกล้า โปรโมชั่น เซ็ตอาหารนานาชาติ สุดพรีเมี่ยม กับเมนู ซุปเห็ดทรัฟเฟิล หอยนางรมมิยางิ ฟัวกราส์ และเมนูอื่นๆ ราคาพิเศษ\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e",
+        "custom_text": null,
+        "name": "Copper Buffet",
+        "names": {
+          "th": "Copper Buffet",
+          "en": "Copper Buffet"
+        },
+        "total_covers": 222039,
+        "restaurant_id": null,
+        "restaurant_encrypted_id": null,
+        "link": "/th/restaurants/search.html?branch_id=82",
+        "cover": {
+          "thumb": "/uploads/restaurants/837/photos/39158/RackMultipart20200610-205-mt2ig.jpg",
+          "slide_thumb": "/uploads/restaurants/837/photos/39158/RackMultipart20200610-205-mt2ig.jpg",
+          "square": "/uploads/restaurants/837/photos/39158/RackMultipart20200610-205-mt2ig.jpg",
+          "original": "/uploads/restaurants/837/photos/39158/RackMultipart20200610-205-mt2ig.jpg"
+        },
+        "last_booking_was_made": "Fri, 22 Jul 2022 10:43:07 +0000",
+        "package_types": ["hah", "ayce", "xp"],
+        "long_package_types": [
+          {
+            "type_short": "xp",
+            "type": "Xperience"
+          },
+          {
+            "type_short": "ayce",
+            "type": "All You Can Eat"
+          },
+          {
+            "type_short": "hah",
+            "type": "Hungry@Home"
+          }
+        ],
+        "price": {
+          "amount": 599,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "599฿"
+        },
+        "price_v2": {
+          "amount": 599,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "599฿"
+        },
+        "pricing_type": "per_set",
+        "covid19_safety": true
+      },
+      "relationships": {
+        "group_landing_page": {
+          "data": {
+            "id": 100,
+            "group_type": "Branch",
+            "group_id": 82,
+            "created_at": "2021-10-05T08:21:14.000Z",
+            "updated_at": "2022-05-10T03:47:35.000Z",
+            "slug": "copper-buffet-unlimited-international-buffet",
+            "group_single_type": null,
+            "title": "Copper Buffet - เต็มอิ่ม บุฟเฟ่ต์ ราคาสุดคุ้ม ",
+            "description": "จอง Copper Buffet (คอปเปอร์ บุฟเฟ่ต์) โปรโมชั่นบุฟเฟ่ต์สุดพิเศษ ดู รีวิว ที่นี่ \r\n\u003cbr\u003eอิ่มไม่อั้นไปกับ บุฟเฟ่ต์นานาชาติ ทั้งหอยนางรม กุ้งเผา แซลมอน สเต็กเนื้อ ซุปเห็ดทรัฟเฟิล ช็อคโกแลตลาวา เครื่องดื่ม ของหวาน ไม่อั้น พร้อม ราคา พิเศษ\u003c/br\u003e\r\nที่เปลื่ยนมื้อที่แสนธรรมดาให้กลายเป็น มื้อที่ \"อร่อยคุ้มค่าแบบมีระดับกับคอปเปอร์บุฟเฟ่ต์\" ",
+            "footer_description": null,
+            "title_th": "Copper Buffet - เต็มอิ่ม บุฟเฟ่ต์ ราคาสุดคุ้ม ",
+            "title_en": "Copper Buffet - Unlimited International Buffet ",
+            "description_th": "จอง Copper Buffet (คอปเปอร์ บุฟเฟ่ต์) โปรโมชั่นบุฟเฟ่ต์สุดพิเศษ ดู รีวิว ที่นี่ \r\n\u003cbr\u003eอิ่มไม่อั้นไปกับ บุฟเฟ่ต์นานาชาติ ทั้งหอยนางรม กุ้งเผา แซลมอน สเต็กเนื้อ ซุปเห็ดทรัฟเฟิล ช็อคโกแลตลาวา เครื่องดื่ม ของหวาน ไม่อั้น พร้อม ราคา พิเศษ\u003c/br\u003e\r\nที่เปลื่ยนมื้อที่แสนธรรมดาให้กลายเป็น มื้อที่ \"อร่อยคุ้มค่าแบบมีระดับกับคอปเปอร์บุฟเฟ่ต์\" ",
+            "description_en": "Book Copper Buffet (Copper Buffet) special buffet promotion, \r\nsee reviews here.\r\n\u003cbr\u003eUnlimited full with International buffet including oysters, grilled shrimp, salmon, beef steak, truffle soup, Chocolate Lava, drinks, unlimited desserts with special price \u003c/br\u003e change a ordinary meal into a meal that is \"tasty and valuable with a classy copper buffet\"",
+            "footer_description_th": "",
+            "footer_description_en": ""
+          }
+        },
+        "city": {
+          "data": {
+            "id": 1,
+            "country_id": 218,
+            "name": "Bangkok",
+            "created_at": "2017-11-26T16:21:25.000Z",
+            "updated_at": "2022-07-24T04:10:59.000Z",
+            "home_description": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_th": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_en": "Enjoy 40% savings with the \"We Travel Together\""
+          }
+        }
+      }
+    },
+    {
+      "id": "8052",
+      "type": "featured_restaurants",
+      "attributes": {
+        "start_date": "2019-12-03",
+        "total_locations": null,
+        "total_reviews": 1428,
+        "avg_reviews": 4.7,
+        "branch_id": null,
+        "cuisine": "จีน",
+        "location": "พระราม 3",
+        "rank": null,
+        "description": "บุฟเฟ่ต์อาหารจีน ริมแม่น้ำ พร้อมเลือกรับเมนูพิเศษ 1 จานฟรี เช่นเป็ดปักกิ่ง สูตรต้นตำรับ จาก The Emperor มณเฑียรริเวอร์ไซด์ ในราคาสุดคุ้ม จองเลย!",
+        "custom_text": null,
+        "name": "ดิ เอมเพอเรอร์ โรงแรม มณเฑียร ริเวอร์ไซด์",
+        "names": {
+          "th": "ดิ เอมเพอเรอร์ โรงแรม มณเฑียร ริเวอร์ไซด์",
+          "en": "The Emperor Montien Riverside Hotel"
+        },
+        "total_covers": 28486,
+        "restaurant_id": 1023,
+        "restaurant_encrypted_id": "the-emperor-montien-riverside-hotel",
+        "link": "https://web.hungryhub.com/th/restaurants/the-emperor-montien-riverside-hotel",
+        "cover": {
+          "thumb": "/uploads/restaurants/1023/photos/30646/RackMultipart20191204-32000-192u5zy.jpg",
+          "slide_thumb": "/uploads/restaurants/1023/photos/30646/RackMultipart20191204-32000-192u5zy.jpg",
+          "square": "/uploads/restaurants/1023/photos/30646/RackMultipart20191204-32000-192u5zy.jpg",
+          "original": "/uploads/restaurants/1023/photos/30646/RackMultipart20191204-32000-192u5zy.jpg"
+        },
+        "last_booking_was_made": "Mon, 18 Jul 2022 05:02:30 +0000",
+        "package_types": ["hah", "ayce"],
+        "long_package_types": [
+          {
+            "type_short": "hah",
+            "type": "Hungry@Home"
+          },
+          {
+            "type_short": "ayce",
+            "type": "All You Can Eat"
+          }
+        ],
+        "price": {
+          "amount": 399,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "399฿"
+        },
+        "price_v2": {
+          "amount": 399,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "399฿"
+        },
+        "pricing_type": "per_set",
+        "covid19_safety": false
+      },
+      "relationships": {
+        "group_landing_page": {
+          "data": null
+        },
+        "city": {
+          "data": {
+            "id": 1,
+            "country_id": 218,
+            "name": "Bangkok",
+            "created_at": "2017-11-26T16:21:25.000Z",
+            "updated_at": "2022-07-24T04:10:59.000Z",
+            "home_description": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_th": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_en": "Enjoy 40% savings with the \"We Travel Together\""
+          }
+        }
+      }
+    },
+    {
+      "id": "8263",
+      "type": "featured_restaurants",
+      "attributes": {
+        "start_date": "2022-03-08",
+        "total_locations": 5,
+        "total_reviews": 596,
+        "avg_reviews": 4.7,
+        "branch_id": 163,
+        "cuisine": "นานาชาติ",
+        "location": null,
+        "rank": null,
+        "description": "\u003cdiv\u003eจองร้าน อาหารกรีนเฮ้าส์ โรงแรมแลนด์มาร์ค นานา โปรโมชั่น อาหารจีน โจ๊กปลากะพง, บะหมี่เป็ดเชี่ยงไฮ้, ซาลาเปาหมูแดง, ราคาพิเศษ ดูรีวิว ที่ Hungry Hub\u003c/div\u003e\u003cdiv\u003eจองร้าน ริบรูม แอนด์ บาร์ สเต็กเฮ้าส์ by The Landmark โปรโมชั่น บุฟเฟ่ต์ รูฟท็อป หอยนางรมสด วากิว และเมนูอื่นๆ พร้อมเครื่องดื่มไม่อั้น ราคาสุดพิเศษ ดูรีวิว \u003c/div\u003e\u003cdiv\u003eจองร้าน Suisian Restaurant โรงแรม แลนด์มาร์ค กรุงเทพ โปรโมชั่น บุฟเฟ่ต์ อาหารจีน ติ่มซำ, กุ้งนึ่งซอสสามรส, ก๋วยเตี๋ยวหลอดกุ้งกรอบ ราคาสุดพิเศษ ดูรีวิว \u003c/div\u003e\u003cdiv\u003eจอง Atrium Restaurant The Landmark Bangkok Hotel นานา อาหารนานาชาติ ดีลสุดพิเศษ เริ่มต้นเพียง 1,400 บาท ดูรีวิวและโปรโมชั่นแนะนำเพิ่มเติม เฉพาะที่ Hungry Hub\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e",
+        "custom_text": "ROOFTOP IN DOOR",
+        "name": "The Landmark Bangkok",
+        "names": {
+          "th": "The Landmark Bangkok",
+          "en": "The Landmark Bangkok"
+        },
+        "total_covers": 24660,
+        "restaurant_id": null,
+        "restaurant_encrypted_id": null,
+        "link": "/th/restaurants/search.html?branch_id=163",
+        "cover": {
+          "thumb": "/uploads/restaurants/2749/photos/69272/RackMultipart20220209-283-1rfx2la.JPG",
+          "slide_thumb": "/uploads/restaurants/2749/photos/69272/RackMultipart20220209-283-1rfx2la.JPG",
+          "square": "/uploads/restaurants/2749/photos/69272/RackMultipart20220209-283-1rfx2la.JPG",
+          "original": "/uploads/restaurants/2749/photos/69272/RackMultipart20220209-283-1rfx2la.JPG"
+        },
+        "last_booking_was_made": "Wed, 06 Jul 2022 09:39:37 +0000",
+        "package_types": ["hah", "ayce", "pp", "xp"],
+        "long_package_types": [
+          {
+            "type_short": "hah",
+            "type": "Hungry@Home"
+          },
+          {
+            "type_short": "pp",
+            "type": "Party Pack"
+          },
+          {
+            "type_short": "xp",
+            "type": "Xperience"
+          },
+          {
+            "type_short": "ayce",
+            "type": "All You Can Eat"
+          }
+        ],
+        "price": {
+          "amount": 890,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "890฿"
+        },
+        "price_v2": {
+          "amount": 296,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "296฿"
+        },
+        "pricing_type": "per_pack",
+        "covid19_safety": false
+      },
+      "relationships": {
+        "group_landing_page": {
+          "data": {
+            "id": 98,
+            "group_type": "Branch",
+            "group_id": 163,
+            "created_at": "2021-10-01T04:42:59.000Z",
+            "updated_at": "2021-10-01T04:42:59.000Z",
+            "slug": "the-landmark-bangkok",
+            "group_single_type": null,
+            "title": "โรงแรมแลนด์มาร์ค",
+            "description": "รวมห้องอาหารสุดหรู ในเครือโรงแรมแลนด์มาร์ค ไม่ว่าจะเป็น ร้านอาหารกรีนเฮ้าส์, ร้านอาหารซุยเซียน และ RIB ROOM \u0026 BAR Steakhouse",
+            "footer_description": null,
+            "title_th": "โรงแรมแลนด์มาร์ค",
+            "title_en": "The Landmark Bangkok",
+            "description_th": "รวมห้องอาหารสุดหรู ในเครือโรงแรมแลนด์มาร์ค ไม่ว่าจะเป็น ร้านอาหารกรีนเฮ้าส์, ร้านอาหารซุยเซียน และ RIB ROOM \u0026 BAR Steakhouse",
+            "description_en": "รวมห้องอาหารสุดหรู ในเครือโรงแรมแลนด์มาร์ค ไม่ว่าจะเป็น ร้านอาหารกรีนเฮ้าส์, ร้านอาหารซุยเซียน และ RIB ROOM \u0026 BAR Steakhouse",
+            "footer_description_th": "",
+            "footer_description_en": ""
+          }
+        },
+        "city": {
+          "data": {
+            "id": 1,
+            "country_id": 218,
+            "name": "Bangkok",
+            "created_at": "2017-11-26T16:21:25.000Z",
+            "updated_at": "2022-07-24T04:10:59.000Z",
+            "home_description": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_th": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_en": "Enjoy 40% savings with the \"We Travel Together\""
+          }
+        }
+      }
+    },
+    {
+      "id": "8308",
+      "type": "featured_restaurants",
+      "attributes": {
+        "start_date": "2022-07-06",
+        "total_locations": 5,
+        "total_reviews": 2505,
+        "avg_reviews": 4.7,
+        "branch_id": 45,
+        "cuisine": "นานาชาติ",
+        "location": null,
+        "rank": null,
+        "description": "\u003cdiv\u003eบุฟเฟ่ต์รูฟท็อป Vertigoโรงแรมบันยันทรี อาหารนานาชาติ สเต็ก แซลมอน กว่า 40 เมนู รวม Mocktail ไม่อั้น โปรโมชั่นเฉพาะจองผ่าน Hungry Hub\u003c/div\u003e\u003cdiv\u003eบุฟเฟ่ต์อาหารญี่ปุ่นสุดหรู วิวชั้น 53 เมนูขึ้นชื่อ เทปันยากิ เนื้อวัว แซลมอน กุ้งลายเสือ ซูชิ มากิโรลไม่อั้น ที่ ห้องอาหารไทเฮ โรงแรมบันยันทรี - Hungry Hub\u003c/div\u003e\u003cdiv\u003eบุฟเฟ่ต์อาหารนานาชาติกว่า 30 เมนู พร้อมม็อคเทล วิวสุดหรู ชั้น 60 โรงแรมบันยันทรี ย่านสาทร 2 ชั่วโมงที่ เวอร์ติโก้ ทู (Vertigo TOO)\u003c/div\u003e\u003cdiv\u003eบุฟเฟ่ต์อาหารนานาชาติ ซีฟู้ด ซูชิฟัวกราส์ ซาชิมิ พิซซ่า พร้อมอาหารทะเลสด ๆ เช่น กุ้ง หอย และรับเมนูพิเศษ ล็อบสเตอร์ ปูนิ่ม ฟรี! เต็มอิ่ม 2 ชั่วโมง ที่ ร่มไทร โรงแรมบันยันทรี\u003c/div\u003e\u003cdiv\u003eดินเนอร์ล่องเรือหรูชมพระอาทิตย์ตกดินฟินไปกับวิวริมแม่น้ำเจ้าพระยาแบบ360องศาพร้อมเมนูอาหารไทยในแพ็กเกจ Party Pack ได้ที่ แซฟฟรอน ครูซ (Saffron Cruise) จองเลย!\u003c/div\u003e\u003cdiv\u003eแพ็กเกจ Staycation โรงแรม บันยันทรี สุดหรู พักผ่อนระดับโรงแรม 5 ดาว พร้อมดินเนอร์หรู บนรูฟท็อป อิ่มไม่อั้นแบบบุฟเฟ่ต์ Deal นี้เมื่อจองผ่าน Hungry Hub!\u003c/div\u003e\u003cdiv\u003eจอง แซฟฟรอน สกาย การ์เด้น รูฟท็อป โรงแรมบันยันทรี กรุงเทพ นานาชาติ ในราคาสุดคุ้มเริ่มต้นเพียง 990.- บาท โปรโมชั่นพิเศษสำหรับจองผ่าน Hungry Hub เท่านั้น\u003c/div\u003e\u003cdiv\u003eจอง แซฟฟรอน เอกลักษณ์ไทย รูฟท็อป โรงแรมบันยันทรี กรุงเทพ อาหารไทย ห้องอาหารลอยฟ้า สุดหรู ในราคาสุดคุ้มเริ่มต้นเพียง 990 บาท โปรโมชั่นพิเศษสำหรับ Hungry Hub เท่านั้น\u003c/div\u003e",
+        "custom_text": "เราเที่ยวด้วยกัน",
+        "name": "Banyan Tree Bangkok",
+        "names": {
+          "th": "Banyan Tree Bangkok",
+          "en": "Banyan Tree Bangkok"
+        },
+        "total_covers": 78455,
+        "restaurant_id": null,
+        "restaurant_encrypted_id": null,
+        "link": "/th/restaurants/search.html?branch_id=45",
+        "cover": {
+          "thumb": "/uploads/restaurants/1733/photos/44853/RackMultipart20201104-247-1tns557.jpg",
+          "slide_thumb": "/uploads/restaurants/1733/photos/44853/RackMultipart20201104-247-1tns557.jpg",
+          "square": "/uploads/restaurants/1733/photos/44853/RackMultipart20201104-247-1tns557.jpg",
+          "original": "/uploads/restaurants/1733/photos/44853/RackMultipart20201104-247-1tns557.jpg"
+        },
+        "last_booking_was_made": "Mon, 18 Jul 2022 06:11:58 +0000",
+        "package_types": ["ayce", "pp", "xp"],
+        "long_package_types": [
+          {
+            "type_short": "xp",
+            "type": "Xperience"
+          },
+          {
+            "type_short": "ayce",
+            "type": "All You Can Eat"
+          },
+          {
+            "type_short": "pp",
+            "type": "Party Pack"
+          }
+        ],
+        "price": {
+          "amount": 2990,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "2,990฿"
+        },
+        "price_v2": {
+          "amount": 747,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "747฿"
+        },
+        "pricing_type": "per_pack",
+        "covid19_safety": true
+      },
+      "relationships": {
+        "group_landing_page": {
+          "data": {
+            "id": 24,
+            "group_type": "Branch",
+            "group_id": 45,
+            "created_at": "2020-09-23T08:44:14.000Z",
+            "updated_at": "2021-11-16T10:20:29.000Z",
+            "slug": "banyan-tree-hotel-bangkok",
+            "group_single_type": null,
+            "title": "ร้านในเครือโรงแรมบันยันทรี",
+            "description": "รวมห้องอาหารโรงแรมหรู ระดับ 5 ดาวย่านสาทร ดื่มด่ำกับรูฟท็อปสุดเอ็กซ์คลูซีฟ 'เวอร์ติโก้' วิวสูงระฟ้า ชั้น 61 ราคาสุดคุ้มที่นี่ที่เดียว หรืออิ่มอร่อยกับห้องอาหารจีนสุดพรีเมียม บรรยากาศแบบหรูหรา ที่ห้องอาหารไบยุน ชั้น 59",
+            "footer_description": null,
+            "title_th": "ร้านในเครือโรงแรมบันยันทรี",
+            "title_en": "Banyan Tree Hotel Bangkok",
+            "description_th": "รวมห้องอาหารโรงแรมหรู ระดับ 5 ดาวย่านสาทร ดื่มด่ำกับรูฟท็อปสุดเอ็กซ์คลูซีฟ 'เวอร์ติโก้' วิวสูงระฟ้า ชั้น 61 ราคาสุดคุ้มที่นี่ที่เดียว หรืออิ่มอร่อยกับห้องอาหารจีนสุดพรีเมียม บรรยากาศแบบหรูหรา ที่ห้องอาหารไบยุน ชั้น 59",
+            "description_en": "Chill out in a moody sunset spot with your lover while having a delightful meal and getting the best Instagram shot with charming lights in the sky at Vertigo and Moon Bar, rooftop bars located on the 61st floor of the Banyan Tree hotel. or Enjoy a modern twist on classic Cantonese dishes while observing magnificent views of the city at Bai Yun is a luxury high-end restaurant, located on the 59th floor.",
+            "footer_description_th": "",
+            "footer_description_en": ""
+          }
+        },
+        "city": {
+          "data": {
+            "id": 1,
+            "country_id": 218,
+            "name": "Bangkok",
+            "created_at": "2017-11-26T16:21:25.000Z",
+            "updated_at": "2022-07-24T04:10:59.000Z",
+            "home_description": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_th": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_en": "Enjoy 40% savings with the \"We Travel Together\""
+          }
+        }
+      }
+    },
+    {
+      "id": "8127",
+      "type": "featured_restaurants",
+      "attributes": {
+        "start_date": "2021-05-15",
+        "total_locations": 2,
+        "total_reviews": 302,
+        "avg_reviews": 4.8,
+        "branch_id": 123,
+        "cuisine": "สเตเคชั่น",
+        "location": null,
+        "rank": null,
+        "description": "\u003cdiv\u003eจองห้องอาหาร Albricias Restaurant ที่ Chatrium Residence Sathon เมนูอาหารสเปน แบบ Fine-dining สุดหรู ราคาพิเศษ เริ่มต้น 1,499 ราคาสุทธิ โปรโมชั่น\u003c/div\u003e\u003cdiv\u003eโปรโมชั่น สเตเคชั่น ใจกลางกรุงเทพ สุดหรู โรงแรม ชาเทรียม เรสซิเดนซ์ สาทร กรุงเทพฯ พักหรู + fine-dining หรือ บุฟเฟ่ต์ พร้อมโปรสปา ราคาพิเศษ ดูรีวิว จอง\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e",
+        "custom_text": "เราเที่ยวด้วยกัน",
+        "name": "Chatrium Residence Sathon Bangkok",
+        "names": {
+          "th": "Chatrium Residence Sathon Bangkok",
+          "en": "Chatrium Residence Sathon Bangkok"
+        },
+        "total_covers": 17115,
+        "restaurant_id": null,
+        "restaurant_encrypted_id": null,
+        "link": "/th/restaurants/search.html?branch_id=123",
+        "cover": {
+          "thumb": "/uploads/restaurants/1937/photos/71072/RackMultipart20220316-282-1us0nle.JPG",
+          "slide_thumb": "/uploads/restaurants/1937/photos/71072/RackMultipart20220316-282-1us0nle.JPG",
+          "square": "/uploads/restaurants/1937/photos/71072/RackMultipart20220316-282-1us0nle.JPG",
+          "original": "/uploads/restaurants/1937/photos/71072/RackMultipart20220316-282-1us0nle.JPG"
+        },
+        "last_booking_was_made": "Tue, 12 Jul 2022 10:30:49 +0000",
+        "package_types": ["pp", "xp"],
+        "long_package_types": [
+          {
+            "type_short": "pp",
+            "type": "Party Pack"
+          },
+          {
+            "type_short": "xp",
+            "type": "Xperience"
+          }
+        ],
+        "price": {
+          "amount": 6090,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "6,090฿"
+        },
+        "price_v2": {
+          "amount": 1015,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "1,015฿"
+        },
+        "pricing_type": "per_pack",
+        "covid19_safety": false
+      },
+      "relationships": {
+        "group_landing_page": {
+          "data": null
+        },
+        "city": {
+          "data": {
+            "id": 1,
+            "country_id": 218,
+            "name": "Bangkok",
+            "created_at": "2017-11-26T16:21:25.000Z",
+            "updated_at": "2022-07-24T04:10:59.000Z",
+            "home_description": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_th": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_en": "Enjoy 40% savings with the \"We Travel Together\""
+          }
+        }
+      }
+    },
+    {
+      "id": "7985",
+      "type": "featured_restaurants",
+      "attributes": {
+        "start_date": "2021-07-09",
+        "total_locations": null,
+        "total_reviews": 180,
+        "avg_reviews": 4.7,
+        "branch_id": null,
+        "cuisine": "ญี่ปุ่น",
+        "location": "พระราม 3",
+        "rank": null,
+        "description": "สั่ง delivery ร้าน ฮาจิเมะ โรบอท สาขา พระรามสาม โปรโมชั่น เซ็ตเมนู อาหารญี่ปุ่น ชาบู สุกี้ยากี้ ซูชิ ซาชิมิ แซลม่อน และเมนูอื่นๆ ราคาพิเศษ รีวิว ",
+        "custom_text": null,
+        "name": "ฮาจิเมะ โรบอท สาขาพระรามสาม.",
+        "names": {
+          "th": "ฮาจิเมะ โรบอท สาขาพระรามสาม.",
+          "en": "Hajime Robot restaurant"
+        },
+        "total_covers": 4542,
+        "restaurant_id": 2243,
+        "restaurant_encrypted_id": "hajime-robot-restaurant",
+        "link": "https://web.hungryhub.com/th/restaurants/hajime-robot-restaurant",
+        "cover": {
+          "thumb": "/uploads/restaurants/2243/photos/62620/RackMultipart20211011-248-uo2zjp.JPG",
+          "slide_thumb": "/uploads/restaurants/2243/photos/62620/RackMultipart20211011-248-uo2zjp.JPG",
+          "square": "/uploads/restaurants/2243/photos/62620/RackMultipart20211011-248-uo2zjp.JPG",
+          "original": "/uploads/restaurants/2243/photos/62620/RackMultipart20211011-248-uo2zjp.JPG"
+        },
+        "last_booking_was_made": "Sun, 26 Jun 2022 10:44:26 +0000",
+        "package_types": ["ayce"],
+        "long_package_types": [
+          {
+            "type_short": "ayce",
+            "type": "All You Can Eat"
+          }
+        ],
+        "price": {
+          "amount": 855,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "855฿"
+        },
+        "price_v2": {
+          "amount": 855,
+          "currency": "THB",
+          "symbol": "฿",
+          "format": "855฿"
+        },
+        "pricing_type": "per_person",
+        "covid19_safety": false
+      },
+      "relationships": {
+        "group_landing_page": {
+          "data": null
+        },
+        "city": {
+          "data": {
+            "id": 1,
+            "country_id": 218,
+            "name": "Bangkok",
+            "created_at": "2017-11-26T16:21:25.000Z",
+            "updated_at": "2022-07-24T04:10:59.000Z",
+            "home_description": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_th": "เราเที่ยวด้วยกันเฟส 4 ส่วนต่อขยาย ลดเพิ่ม 40% จองได้แล้ววันนี้",
+            "home_description_en": "Enjoy 40% savings with the \"We Travel Together\""
+          }
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "/api/v5/homes/section_3.json?city_id=1\u0026page%5Bnumber%5D=1\u0026page%5Bsize%5D=20",
+    "first": "/api/v5/homes/section_3.json?city_id=1\u0026page%5Bnumber%5D=1\u0026page%5Bsize%5D=20",
+    "prev": null,
+    "next": null,
+    "last": "/api/v5/homes/section_3.json?city_id=1\u0026page%5Bnumber%5D=1\u0026page%5Bsize%5D=20"
+  },
+  "success": true,
+  "message": null,
+  "title": "ร้านเด็ด น่าโดน",
+  "clevertap_event_name": "Daily Picks"
+}
