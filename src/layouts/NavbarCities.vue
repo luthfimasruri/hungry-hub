@@ -12,12 +12,12 @@ const props = defineProps({
 <template>
   <div v-if="!citiesStore.loading" class="ml-2 md:ml-3">
     <select
-      id="city"
       name="city"
+      data-cy="navbar-cities"
       class="block h-8 w-full rounded-full border-red-300 py-1 pl-3 pr-8 text-sm focus:border-black focus:outline-none focus:ring-black"
       :class="props.innerClass"
-      @change="citiesStore.setCityById($event.target.value)"
       :value="citiesStore.currentCityId"
+      @change="citiesStore.setCityById($event.target.value)"
     >
       <option v-for="city in citiesStore.data" :key="city.id" :value="city.id">
         {{ city.attributes.name }}

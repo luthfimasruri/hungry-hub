@@ -14,7 +14,7 @@ const { appItems, menuItems } = useNavbar()
 
 <template>
   <!-- Top Menu -->
-  <div class="bg-gray-200">
+  <div data-cy="navbar-menu" class="bg-gray-200">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <ul class="flex items-center justify-end">
         <template v-for="item in menuItems" :key="item.text">
@@ -52,14 +52,18 @@ const { appItems, menuItems } = useNavbar()
   </div>
 
   <!-- Middle Navigation -->
-  <Disclosure as="nav" class="sticky top-0 z-10 bg-white shadow">
+  <Disclosure
+    as="nav"
+    data-cy="navbar"
+    class="sticky top-0 z-10 bg-white shadow"
+  >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-11 justify-between">
         <div class="flex items-center">
           <RouterLink class="flex-shrink-0" to="/"
             ><img
               alt="Hungry Hub Logo"
-              class=""
+              data-cy="logo"
               src="/images/logo-new-full.png"
               width="130"
           /></RouterLink>

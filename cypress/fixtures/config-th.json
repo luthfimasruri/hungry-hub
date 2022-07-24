@@ -1,0 +1,96 @@
+{
+  "success": true,
+  "data": {
+    "enable_gift_card_feature": true,
+    "we_travel_together_icon_url": "https://www.hungryhub.com/uploads/restaurants/tc/image/29/tc.png",
+    "show_distance_on_search_page": false,
+    "culture_locale": "th_TH",
+    "available_locales": ["th", "en"],
+    "cdn_url": "https://hh-images-prod.s3-ap-southeast-1.amazonaws.com",
+    "app_title": "แอปจองมื้อพิเศษอันดับ 1 ของไทย 2022",
+    "app_description": "แอปพลิเคชั่นจองร้านอาหาร บุฟเฟ่ต์ ที่พักโรงแรม สเตเคชั่น พร้อมดีลสุดพิเศษจากร้านชั้นนำมากกว่า 700 ร้านทั่วประเทศไทย ที่จะเปลี่ยนมื้อธรรมดา ให้กลายเป็นมื้อพิเศษสำหรับคุณ จองฟรี! ยกเลิกฟรี! สั่งได้ดั่งใจในราคาที่ Net แล้ว",
+    "total_restaurant": 800,
+    "total_covers": 2000000,
+    "support_phone": "0628274333",
+    "max_image_file_size_in_mb": 3,
+    "selected_payment_provider": {
+      "promptpay": "gb_primepay",
+      "cc": "gb_primepay"
+    },
+    "restaurant_price_range": {
+      "min": 100,
+      "max": 10000,
+      "currency": "THB"
+    },
+    "promptpay_unsupported_banks": [
+      "CIMB",
+      "UOB Mighty",
+      "ธนาคารอาคารสงเคราะห์"
+    ],
+    "promptpay_countdown": 600,
+    "term_condition_big_group": "",
+    "gb_primepay_public_key": "ZSKJrXwdeVycZHXZhrp4LvDb2O035Sxi",
+    "cities": [
+      {
+        "id": 1,
+        "name": "Bangkok"
+      },
+      {
+        "id": 3,
+        "name": "Phuket"
+      },
+      {
+        "id": 4,
+        "name": "Pattaya"
+      },
+      {
+        "id": 6,
+        "name": "Hua Hin"
+      },
+      {
+        "id": 11,
+        "name": "Koh Samui"
+      }
+    ],
+    "dynamic_points": {
+      "review_reservation": 10,
+      "new_user_voucher_point": 100,
+      "early_bird": {
+        "max_reviews": 5,
+        "point": 100
+      },
+      "referrer_reward_point": 100
+    },
+    "package_list": {
+      "ayce": "All You Can Eat",
+      "pp": "Party Pack",
+      "xp": "Xperience",
+      "hah": "Hungry@Home",
+      "hs": "Hungry Lunch",
+      "sm": "Set Menu",
+      "bfp": "Buffet Plus"
+    },
+    "package_tag_lines": {
+      "ayce": "อิ่มอร่อยกับร้านโปรดของคุณได้แบบบุฟเฟ่ต์ไม่อั้น",
+      "pp": "เมนูคุ้มค่าสำหรับการเลี้ยงฉลองครั้งต่อไป!. สามารถเลือกแพ็กหลายๆแบบได้",
+      "bfp": "ทานไม่อั้นพร้อมรับสิทธิพิเศษ",
+      "hs": "มื้ออาหารกลางวันแบบครบชุดในราคาสุทธิ!",
+      "sm": "Exclusive Set Menu",
+      "hah": "ดีลสุดพิเศษสำหรับ เดลิเวอรี่ และ รับเองที่ร้าน",
+      "xp": "รวมแพ็กเกจดีลสุดคุ้ม ทั้งอาหาร รวมกิจกรรมสนุกๆ อีกมากมาย"
+    },
+    "use_async_booking": true,
+    "wtt_link_url": "https://www.xn--12c1bik6bbd8ab6hd1b5jc6jta.com",
+    "banner_voucher_url": "https://hungryhub.com/uploads/restaurants/tc/image/63/tc.png",
+    "mobile_banner_voucher_url": "https://hungryhub.com/uploads/restaurants/tc/image/65/tc.jpg",
+    "web_v2_host": "https://web.hungryhub.com",
+    "limited_seats_showing": "100",
+    "delivery_fee_currency": "THB",
+    "delivery_fee_per_km_in_baht": 10,
+    "free_delivery_fee_threshold_in_baht": 0,
+    "delivery_radius": 5,
+    "min_group_booking_party_size": 6,
+    "delivery_fee_in_baht": 0
+  },
+  "message": null
+}

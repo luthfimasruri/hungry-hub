@@ -14,6 +14,7 @@ const { appItems, menuItems } = useNavbar()
 <template>
   <Disclosure
     as="nav"
+    data-cy="navbar-mobile"
     class="sticky top-0 z-10 bg-white shadow"
     v-slot="{ open }"
   >
@@ -24,6 +25,7 @@ const { appItems, menuItems } = useNavbar()
             <div class="-ml-2 mr-2 flex items-center md:hidden">
               <!-- Mobile menu button -->
               <DisclosureButton
+                data-cy="navbar-mobile-toggle"
                 class="inline-flex items-center justify-center rounded-full p-1 text-red-400 hover:bg-gray-100 hover:text-red-500 focus:outline-none"
               >
                 <span class="sr-only">Open main menu</span>
@@ -68,7 +70,10 @@ const { appItems, menuItems } = useNavbar()
         class="fixed inset-0 top-11 z-10 bg-black bg-opacity-50 transition-all duration-200 ease-in-out"
       ></div>
       <!-- Dropdown Menu -->
-      <DisclosurePanel class="absolute z-20 md:hidden">
+      <DisclosurePanel
+        data-cy="navbar-mobile-menu"
+        class="absolute z-20 md:hidden"
+      >
         <div class="z-20 space-y-1">
           <div class="bg-gray-200" style="width: 200px">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
