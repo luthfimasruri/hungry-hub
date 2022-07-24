@@ -12,8 +12,8 @@ export const useCitiesStore = defineStore({
     loading: false,
   }),
   actions: {
-    setCities(cities) {
-      this.data = cities
+    setData(data) {
+      this.data = data
     },
     setCityById(id) {
       this.currentCityId = id
@@ -22,8 +22,8 @@ export const useCitiesStore = defineStore({
     },
     async initCities() {
       this.loading = true
-      const { data: cities } = await api.get('/api/v5/cities.json')
-      this.setCities(cities)
+      const { data } = await api.get('/api/v5/cities.json')
+      this.setData(data)
       this.setCityById(this.currentCityId)
       this.loading = false
     },

@@ -21,16 +21,16 @@ export const useBannersStore = defineStore({
     },
   },
   actions: {
-    setBanners(banners) {
-      this.data = banners
+    setData(data) {
+      this.data = data
     },
     async fetchBanners() {
       this.loading = true
       const citiesStore = useCitiesStore()
-      const banners = await api.get(
+      const data = await api.get(
         `/api/v5/banners.json?city_id=${citiesStore.currentCityId}`
       )
-      this.setBanners(banners)
+      this.setData(data)
       this.loading = false
     },
   },

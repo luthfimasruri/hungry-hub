@@ -13,10 +13,10 @@ export const useSection3Store = defineStore({
   }),
   getters: {},
   actions: {
-    setSection3Data(data) {
+    setData(data) {
       this.data = data
     },
-    setSection3Title(title) {
+    setTitle(title) {
       this.title = title
     },
     async fetchSection3() {
@@ -25,8 +25,8 @@ export const useSection3Store = defineStore({
       const { data, title } = await api.get(
         `/api/v5/homes/section_3.json?city_id=${citiesStore.currentCityId}`
       )
-      this.setSection3Title(title)
-      this.setSection3Data(data)
+      this.setTitle(title)
+      this.setData(data)
       this.loading = false
     },
   },

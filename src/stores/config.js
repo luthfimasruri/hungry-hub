@@ -14,13 +14,13 @@ export const useConfigStore = defineStore({
     appDescription: (state) => state.data?.app_description,
   },
   actions: {
-    setConfig(config) {
-      this.data = config
+    setData(data) {
+      this.data = data
     },
     async fetchConfig() {
       this.loading = true
-      const { data: config } = await api.get('/api/v5/config.json')
-      this.setConfig(config)
+      const { data } = await api.get('/api/v5/config.json')
+      this.setData(data)
       this.loading = false
     },
   },
