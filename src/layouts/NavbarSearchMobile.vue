@@ -1,11 +1,29 @@
 <script setup>
-import { ref } from 'vue'
+import { nextTick, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { XIcon } from '@heroicons/vue/outline'
 import NavbarCities from './NavbarCities.vue'
 
 const { t } = useI18n({ useScope: 'global' })
+const { push } = useRouter()
+
 const open = ref(false)
+const search = ref(null)
+const searchInput = ref(null)
+
+const onSearch = () => {
+  push({ name: 'restaurants-search', query: { name_like: search.value } })
+}
+
+const onSearchToggle = () => {
+  open.value = !open.value
+  if (open.value) {
+    nextTick(() => {
+      searchInput.value.focus()
+    })
+  }
+}
 </script>
 
 <template>
@@ -24,36 +42,38 @@ const open = ref(false)
       />
       <hr class="mr-2 h-8 border-r border-gray-300" />
       <input
-        class="block h-8 min-w-0 grow border-0 border-b border-gray-300 pr-6 text-sm focus:border-gray-400 focus:ring-0"
+        v-model="search"
+        data-cy="navbar-search-input"
+        ref="searchInput"
         type="text"
+        class="block h-8 min-w-0 grow border-0 border-b border-gray-300 pr-6 text-sm focus:border-gray-400 focus:ring-0"
         :placeholder="t('search_placeholder')"
+        @keyup.enter="onSearch"
       />
       <button
-        @click="open = !open"
+        data-cy="navbar-search-button"
+        @click="onSearch"
         type="button"
         class="flex-none rounded-full focus:outline-none focus:ring-2 focus:ring-black"
       >
         <img
           alt="Search Button"
-          class=""
+          class="h-8 w-8"
           src="/images/search-button-red.png"
-          width="32"
-          height="32"
         />
       </button>
     </div>
   </div>
   <button
-    @click="open = !open"
+    data-cy="navbar-search-toggle"
+    @click="onSearchToggle"
     type="button"
     class="flex-none rounded-full focus:outline-none focus:ring-2 focus:ring-black"
   >
     <img
       alt="Search Button"
-      class=""
+      class="h-8 w-8"
       src="/images/search-button-red.png"
-      width="32"
-      height="32"
     />
   </button>
 </template>

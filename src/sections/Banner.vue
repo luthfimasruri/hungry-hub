@@ -1,11 +1,16 @@
 <script setup>
-import { watch } from 'vue'
+import { ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useBannersStore } from '../stores/banners'
 import { useConfigStore } from '../stores/config'
 import { useCitiesStore } from '../stores/cities'
 import { useURL } from '../composables/url'
+
+const { t } = useI18n()
+const { push } = useRouter()
+const { pathToURL } = useURL()
 
 const configStore = useConfigStore()
 await configStore.fetchConfig()
@@ -19,8 +24,10 @@ watch(currentCityId, async () => {
   await bannersStore.fetchBanners()
 })
 
-const { t } = useI18n()
-const { pathToURL } = useURL()
+const search = ref(null)
+const onSearch = () => {
+  push({ name: 'restaurants-search', query: { name_like: search.value } })
+}
 </script>
 
 <template>
@@ -48,20 +55,25 @@ const { pathToURL } = useURL()
         </p>
         <div class="">
           <form
-            action="#"
+            data-cy="banner-search-form"
+            @submit.prevent="onSearch"
             method="POST"
             class="mx-auto mt-3 flex max-w-3xl items-center rounded-full bg-white"
           >
-            <label for="email" class="sr-only">Email</label>
+            <label for="banner-search-input" class="sr-only"
+              >Search Input</label
+            >
             <img
               class="hidden h-11 w-11 p-3 sm:inline"
               src="/icons/icon-search-red.png"
               alt="Search"
             />
             <input
+              v-model="search"
+              data-cy="banner-search-input"
+              id="banner-search-input"
+              name="name_like"
               type="text"
-              name="email"
-              id="email"
               class="block w-full rounded-full border-transparent py-2 text-base placeholder-gray-500 shadow-sm focus:border-black focus:ring-black sm:flex-1"
               :placeholder="t('search_placeholder')"
             />

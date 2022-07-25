@@ -24,21 +24,16 @@ const { mdAndUp } = useBreakpoint()
       </template>
     </Suspense>
 
-    <template v-if="mdAndUp()">
-      <Suspense>
+    <Suspense>
+      <template v-if="mdAndUp()">
         <Section3 />
-        <template #fallback>
-          <LoadingCards />
-        </template>
-      </Suspense>
-    </template>
-    <template v-else>
-      <Suspense>
+      </template>
+      <template v-else>
         <Section3Mobile />
-        <template #fallback>
-          <LoadingCards />
-        </template>
-      </Suspense>
-    </template>
+      </template>
+      <template #fallback>
+        <LoadingCards />
+      </template>
+    </Suspense>
   </main>
 </template>

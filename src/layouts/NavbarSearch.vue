@@ -1,10 +1,27 @@
 <script setup>
-import { ref } from 'vue'
+import { nextTick, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import NavbarCities from './NavbarCities.vue'
 
+const { push } = useRouter()
 const { t } = useI18n({ useScope: 'global' })
 const expanded = ref(false)
+const search = ref(null)
+const searchInput = ref(null)
+
+const onSearch = () => {
+  push({ name: 'restaurants-search', query: { name_like: search.value } })
+}
+
+const onSearchToggle = () => {
+  expanded.value = !expanded.value
+  if (expanded.value) {
+    nextTick(() => {
+      searchInput.value.focus()
+    })
+  }
+}
 </script>
 
 <template>
@@ -23,23 +40,27 @@ const expanded = ref(false)
         <NavbarCities class="w-28" inner-class="border-none" />
         <hr class="h-8 border-r border-gray-300" />
         <input
-          class="h-8 w-64 border-0 border-b border-gray-300 pr-6 text-sm focus:border-gray-400 focus:ring-0"
+          v-model="search"
+          data-cy="navbar-search-input"
+          ref="searchInput"
           type="text"
+          class="h-8 w-64 border-0 border-b border-gray-300 pr-6 text-sm focus:border-gray-400 focus:ring-0"
           :placeholder="t('search_placeholder')"
+          @keyup.enter="onSearch"
         />
       </div>
     </transition>
     <button
-      @click="expanded = !expanded"
+      data-cy="navbar-search-toggle"
       type="button"
-      class="relative rounded-full focus:outline-none focus:ring-2 focus:ring-black"
+      class="relative rounded-full ring-black focus:outline-none"
+      :class="expanded ? 'ring-2' : 'ring-0'"
+      @click="onSearchToggle"
     >
       <img
         alt="Search Button"
-        class=""
+        class="h8 w-8"
         src="/images/search-button-red.png"
-        width="32"
-        height="32"
       />
     </button>
   </div>

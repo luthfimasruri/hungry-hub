@@ -42,15 +42,15 @@ const props = defineProps({
   },
   acceptDineIn: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   acceptXperience: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   acceptDelivery: {
     type: Boolean,
-    default: true,
+    default: false,
   },
 })
 </script>

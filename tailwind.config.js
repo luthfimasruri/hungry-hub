@@ -23,6 +23,9 @@ module.exports = {
         '3xs': '.55rem',
         '2xs': '.65rem',
       },
+      aspectRatio: {
+        '14/9': '14 / 9',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
