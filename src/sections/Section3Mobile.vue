@@ -11,6 +11,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
+const { pathToURL } = useURL()
 const section3Store = useSection3Store()
 await section3Store.fetchSection3()
 
@@ -19,8 +20,6 @@ const { currentCityId } = storeToRefs(citiesStore)
 watch(currentCityId, async () => {
   await section3Store.fetchSection3()
 })
-
-const { pathToURL } = useURL()
 </script>
 
 <template>

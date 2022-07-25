@@ -10,6 +10,7 @@ import { useURL } from '../composables/url'
 import { useBreakpoint } from '../composables/breakpoint'
 import VCardRestaurant from '../components/VCardRestaurant.vue'
 
+const { pathToURL } = useURL()
 const section3Store = useSection3Store()
 await section3Store.fetchSection3()
 
@@ -19,7 +20,6 @@ watch(currentCityId, async () => {
   await section3Store.fetchSection3()
 })
 
-const { pathToURL } = useURL()
 const onSwiper = () => {}
 const onSlideChange = () => {}
 const modules = [Navigation, Pagination, A11y]
