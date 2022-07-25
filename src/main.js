@@ -10,13 +10,15 @@ const { currentLocale } = useLocales()
  */
 import en from './locales/en.json'
 import th from './locales/th.json'
-const i18n = createI18n({
-  locale: currentLocale,
-  messages: {
-    en,
-    th,
-  },
-})
+const i18n = (locale = currentLocale) => {
+  return createI18n({
+    locale,
+    messages: {
+      en,
+      th,
+    },
+  })
+}
 
 import App from './App.vue'
 import router from './router'
@@ -28,6 +30,8 @@ import './assets/css/main.css'
 
 const app = createApp(App)
 app.use(createPinia())
+app.use(i18n())
 app.use(router)
-app.use(i18n)
 app.mount('#app')
+
+export { i18n as useI18n, createPinia as usePinia }

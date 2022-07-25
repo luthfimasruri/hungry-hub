@@ -56,7 +56,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="group relative rounded-md shadow-lg">
+  <div data-cy="v-card-restaurant" class="group relative rounded-md shadow-lg">
     <div
       class="min-h-80 aspect-video w-full overflow-hidden rounded-t-md bg-gray-200 group-hover:opacity-90"
     >
