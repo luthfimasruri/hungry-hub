@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
 import { useLocales } from './composables/locales'
+import Rollbar from 'rollbar'
 const { currentLocale } = useLocales()
 
 /*
@@ -20,6 +21,15 @@ const i18n = (locale = currentLocale) => {
   })
 }
 
+const rollbar = new Rollbar({
+  accessToken: import.meta.env.VITE_ROLLBAR_TOKEN,
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+  payload: {
+    environment: import.meta.env.MODE,
+  },
+})
+
 import App from './App.vue'
 import router from './router'
 
@@ -29,6 +39,13 @@ import 'swiper/css/pagination'
 import './assets/css/main.css'
 
 const app = createApp(App)
+app.provide('$rollbar', rollbar)
+app.config.errorHandler = (err, vm, info) => {
+  rollbar.error(err, {
+    vm,
+    info,
+  })
+}
 app.use(createPinia())
 app.use(i18n())
 app.use(router)
