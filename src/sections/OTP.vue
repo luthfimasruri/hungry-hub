@@ -1,7 +1,7 @@
 <template>
   <div>
     <form class="p-4" @submit.prevent="verifyOTP">
-      <div
+      <!-- <div
         id="input-otp-wrapper"
         class="mb-6 flex flex-row justify-center text-center"
       >
@@ -17,8 +17,13 @@
           max="9"
           style="width: 40px"
         />
-      </div>
-      <input type="text" autocomplete="one-time-code" inputmode="numeric" />
+      </div> -->
+      <input
+        type="text"
+        autocomplete="one-time-code"
+        inputmode="numeric"
+        class="border"
+      />
 
       <div class="mt-6 text-center">
         <button type="submit">Verify</button>
@@ -58,11 +63,11 @@ export default {
       this.otpNumbers = new Array(this.otpLength).fill('')
       this.isOtpValid = true
       this.phoneVerified = false
-      this.$nextTick(() => {
-        this.initInputOtp()
-        this.initWebOtp()
-        this.initOtp2()
-      })
+      // this.$nextTick(() => {
+      //   this.initInputOtp()
+      //   this.initWebOtp()
+      // })
+      this.initOtp2()
     },
     verifyOTP() {
       alert('verifyOTP')
@@ -95,39 +100,38 @@ export default {
         })
       }
     },
-    initWebOtp() {
-      // Web OTP feature detection
-      if ('OTPCredential' in window) {
-        // alert('Web OTP is supported')
-        const inputs = document.getElementById('input-otp-wrapper').children
-        if (!inputs.length) return
-        const ac = new AbortController()
-        const form = inputs[0].closest('form')
-        // Invoke the WebOTP API
-        navigator.credentials
-          .get({
-            otp: { transport: ['sms'] },
-            signal: ac.signal,
-          })
-          .then((otp) => {
-            alert('otp', otp.code)
-            this.otp = otp.code
-            for (let i = 0; i < inputs.length; i++) {
-              inputs[i].value = otp.code.charAt(i)
-            }
-            // Automatically verify when an OTP is obtained.
-            if (form) form.submit()
-          })
-          .catch((err) => {
-            this.$rollbar.error(err)
-          })
-      }
-    },
+    // initWebOtp() {
+    //   // Web OTP feature detection
+    //   if ('OTPCredential' in window) {
+    //     // alert('Web OTP is supported')
+    //     const inputs = document.getElementById('input-otp-wrapper').children
+    //     if (!inputs.length) return
+    //     const ac = new AbortController()
+    //     const form = inputs[0].closest('form')
+    //     // Invoke the WebOTP API
+    //     navigator.credentials
+    //       .get({
+    //         otp: { transport: ['sms'] },
+    //         signal: ac.signal,
+    //       })
+    //       .then((otp) => {
+    //         alert('otp', otp.code)
+    //         this.otp = otp.code
+    //         for (let i = 0; i < inputs.length; i++) {
+    //           inputs[i].value = otp.code.charAt(i)
+    //         }
+    //         // Automatically verify when an OTP is obtained.
+    //         if (form) form.submit()
+    //       })
+    //       .catch((err) => {
+    //         this.$rollbar.error(err)
+    //       })
+    //   }
+    // },
     initOtp2() {
       if ('OTPCredential' in window) {
         alert('Web OTP is supported')
         window.addEventListener('DOMContentLoaded', (e) => {
-          alert('DOMContentLoaded')
           console.log('DOMContentLoaded', e)
           const input = document.querySelector(
             'input[autocomplete="one-time-code"]'
@@ -142,15 +146,16 @@ export default {
               ac.abort()
             })
           }
+          alert('DOMContentLoaded')
           navigator.credentials
             .get({
               otp: { transport: ['sms'] },
               signal: ac.signal,
             })
             .then((otp) => {
-              alert('otp', otp.code)
               input.value = otp.code
               if (form) form.submit()
+              alert('otp', otp.code)
             })
             .catch((err) => {
               console.log(err)
