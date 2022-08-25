@@ -18,6 +18,7 @@
           style="width: 40px"
         />
       </div>
+      <input autocomplete="one-time-code" required />
 
       <div class="mt-6 text-center">
         <button type="submit">Verify</button>
@@ -60,6 +61,7 @@ export default {
       this.$nextTick(() => {
         this.initInputOtp()
         this.initWebOtp()
+        this.initOtp2()
       })
     },
     verifyOTP() {
@@ -120,6 +122,32 @@ export default {
             this.$rollbar.error(err)
           })
       }
+    },
+    initOtp2() {
+      const input = document.querySelector(
+        'input[autocomplete="one-time-code"]'
+      )
+      if (!input) return
+      const ac = new AbortController()
+      const form = input.closest('form')
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          ac.abort()
+        })
+      }
+      navigator.credentials
+        .get({
+          otp: { transport: ['sms'] },
+          signal: ac.signal,
+        })
+        .then((otp) => {
+          alert('otp', otp.code)
+          input.value = otp.code
+          if (form) form.submit()
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     },
   },
 }
