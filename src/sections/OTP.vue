@@ -96,6 +96,7 @@ export default {
     initWebOtp() {
       // Web OTP feature detection
       if ('OTPCredential' in window) {
+        alert('Web OTP is supported')
         const inputs = document.getElementById('input-otp-wrapper').children
         if (!inputs.length) return
         const ac = new AbortController()
