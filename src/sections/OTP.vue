@@ -18,7 +18,7 @@
           style="width: 40px"
         />
       </div>
-      <input autocomplete="one-time-code" required />
+      <input type="text" autocomplete="one-time-code" inputmode="numeric" />
 
       <div class="mt-6 text-center">
         <button type="submit">Verify</button>
@@ -125,20 +125,20 @@ export default {
     },
     initOtp2() {
       if ('OTPCredential' in window) {
-        alert('Web OTP is supported')
         window.addEventListener('DOMContentLoaded', (e) => {
           alert('DOMContentLoaded')
-          console.log(e)
+          console.log('DOMContentLoaded', e)
           const input = document.querySelector(
             'input[autocomplete="one-time-code"]'
           )
+          console.log('input', input)
           if (!input) return
           const ac = new AbortController()
           const form = input.closest('form')
           if (form) {
             form.addEventListener('submit', (e) => {
+              console.log('submit', e)
               ac.abort()
-              console.log(e)
             })
           }
           navigator.credentials
@@ -147,6 +147,7 @@ export default {
               signal: ac.signal,
             })
             .then((otp) => {
+              alert('otp', otp.code)
               input.value = otp.code
               if (form) form.submit()
             })
