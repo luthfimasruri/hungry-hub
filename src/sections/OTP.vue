@@ -146,7 +146,7 @@ export default {
               ac.abort()
             })
           }
-          alert('DOMContentLoaded')
+          alert('DOMContentLoaded 1')
           navigator.credentials
             .get({
               otp: { transport: ['sms'] },
