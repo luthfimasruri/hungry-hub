@@ -98,7 +98,7 @@ export default {
     initWebOtp() {
       // Web OTP feature detection
       if ('OTPCredential' in window) {
-        alert('Web OTP is supported')
+        // alert('Web OTP is supported')
         const inputs = document.getElementById('input-otp-wrapper').children
         if (!inputs.length) return
         const ac = new AbortController()
@@ -125,30 +125,35 @@ export default {
     },
     initOtp2() {
       if ('OTPCredential' in window) {
-        const input = document.querySelector(
-          'input[autocomplete="one-time-code"]'
-        )
-        if (!input) return
-        const ac = new AbortController()
-        const form = input.closest('form')
-        if (form) {
-          form.addEventListener('submit', () => {
-            ac.abort()
-          })
-        }
-        navigator.credentials
-          .get({
-            otp: { transport: ['sms'] },
-            signal: ac.signal,
-          })
-          .then((otp) => {
-            alert('otp', otp.code)
-            input.value = otp.code
-            if (form) form.submit()
-          })
-          .catch((err) => {
-            console.log(err)
-          })
+        alert('Web OTP is supported')
+        window.addEventListener('DOMContentLoaded', (e) => {
+          alert('DOMContentLoaded')
+          console.log(e)
+          const input = document.querySelector(
+            'input[autocomplete="one-time-code"]'
+          )
+          if (!input) return
+          const ac = new AbortController()
+          const form = input.closest('form')
+          if (form) {
+            form.addEventListener('submit', (e) => {
+              ac.abort()
+              console.log(e)
+            })
+          }
+          navigator.credentials
+            .get({
+              otp: { transport: ['sms'] },
+              signal: ac.signal,
+            })
+            .then((otp) => {
+              input.value = otp.code
+              if (form) form.submit()
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+        })
       }
     },
   },
