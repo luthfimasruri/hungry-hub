@@ -125,6 +125,7 @@ export default {
     },
     initOtp2() {
       if ('OTPCredential' in window) {
+        alert('Web OTP is supported')
         window.addEventListener('DOMContentLoaded', (e) => {
           alert('DOMContentLoaded')
           console.log('DOMContentLoaded', e)
